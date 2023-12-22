@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Finance App</title>
+        <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
+        <link rel="icon" href="./resources/bilder/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+        <script src="./javascript/index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    </head>
+    <body>
+        <h1>Finance planner</h1>
+        <section>
+            <div>
+                <p>Monthly budget:</p>
+                <input type="number" name="Monthly budget">
+            </div>
+            <div>
+                <i class="fa fa-save"></i>
+            </div>
+        </section>
+        <section id="earningsSection">  
+            <div>
+                <p>Earnings:</p>
+                <button onclick="addCostBtn('earningsTbl')">+</button>
+                <table id="earningsTbl">
+                    <tr>
+                        <th>Cause</th>
+                        <th>Amount</th>
+                    </tr>
+                    
+                </table>
+            </div>
+        </section>
+        <section id="fixedCostsSection">
+            <div>
+                <p>Fixed costs:</p>
+                <button onclick="addCostBtn('fixCostTbl')">+</button>
+                <table id="fixCostTbl">
+                    <tr>
+                        <th>Cause</th>
+                        <th>Amount</th>
+                    </tr>
+                    
+                </table>
+            </div>
+        </section>
+        <section id="variableCostsSection">
+            <div>
+                <p>Variable costs:</p>
+                <button onclick="addCostBtn('variableCostTbl')">+</button>
+                <table id="variableCostTbl">
+                    <tr>
+                        <th>Cause</th>
+                        <th>Amount</th>
+                    </tr>
+                    
+                </table>
+            </div>
+        </section>
+
+        <section id="chartSection">
+            <button onclick="calculateChart()">Calculate Chart</button>
+            <canvas id="financeChart"></canvas>
+        </section>
+        
+    </body>
+</html>
